@@ -3,13 +3,7 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  border: 1px solid grey;
-}
-
-.centraqualcosaclass{
-  align-items: center;
-  display: flex;
-  justify-content: center;
+  /* border: 1px solid grey; */
 }
 
 body {
@@ -24,6 +18,73 @@ header,main{
     position: absolute;
 }
 
+/* classi con proprietà generiche da riutilizzare */
+.centraQualcosaClass{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.totalWidthHeightClass{
+  width: 100%;
+  height:100%;
+  margin: auto;
+}
+
+.margineDxClass{
+  margin-right: 20px;
+}
+
+.boxWhiteClass{
+  background: white;
+  height: 75px;
+  display: flex;
+}
+
+.boxGreyClass{
+  background: #EAEAEA;
+  height: 75px;
+  display: flex;
+}
+
+.colorecelesteclass{
+  color: #8EDAFB;
+}
+
+.bordernullclass{
+  border: none #F5F5F5;
+}
+
+.listUser{
+  justify-content: flex-start;
+}
+
+i {
+  color: grey;
+  opacity: 0.7;
+}
+
+img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 20px;
+  margin-left: 15px;
+}
+
+h4,p{
+  font-weight: 400;
+}
+
+p{
+  font-size: 13px;
+  color: grey;
+}
+
+input{
+  border-radius: 10px;
+}
+
 header{
   background: #009688;
   height: 15vh;
@@ -32,7 +93,6 @@ header{
 }
 
 main{
-
   width: 100vw;
   height: 100vh;
   margin: auto;
@@ -58,38 +118,51 @@ section{
 }
 
 /* header parte sinistra */
-.header-partesx{
-  background: #EAEAEA;
-  height: 75px;
-  display: flex;
-}
 .box-photo-user{
   width: 30%;
-}
-
-img{
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
 }
 
 .bottoni-user-msg{
   width: 100%;
   justify-content: flex-end;
 }
-
-i {
-  margin-right: 17px;
-  color: grey;
-  opacity: 0.7;
-}
-
 /* fine header */
 
 /* box con notifica messaggio utente */
 .notify-msg{
   background: #8EDAFB;
   height: 75px;
+  justify-content: space-evenly;
+}
+
+.ringthebell{
+  background: white;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+}
+
+.box-search{
+  height: 52px;
+  background: #FAFAFA;
+  }
+
+.searchmsg{
+  height: 86%;
+  width: 97%;
+  margin: 4px auto;
+  justify-content: flex-start;
+}
+
+.serchmsg-behind{
+  width: 15%;
+  height: 100%;
+  background: white;
+}
+
+.container{
+  height: calc(100% - 75px - 75px - 56px);
+  overflow-y: scroll;
 }
 
 /* PARTE DESTRA PER INVIARE/LEGGERE MESSAGGI RICEVUTI */
@@ -101,5 +174,18 @@ i {
   display:flex;
   background: #EAEAEA;
   height: 75px;
+}
 
+.box-photo-user-actual{
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.main-partedx{
+  height: calc(100% - 75px - 75px);
+  background: url(https://4d3dn.csb.app/boolzapp/img/mine.jpg);
+}
+
+.beigeColourClass{
+background: #F3EEE9;
 }
