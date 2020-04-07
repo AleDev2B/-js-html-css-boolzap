@@ -39,6 +39,7 @@ header,main{
   background: white;
   height: 75px;
   display: flex;
+  border-bottom: 1px solid lightgrey;
 }
 
 .boxGreyClass{
@@ -131,7 +132,7 @@ section{
   position: relative;
   display: flex;
   width: 81vw;
-  height: 90vh;
+  height: 95vh;
   z-index: 3;
   background: white;
   margin-left: auto;
