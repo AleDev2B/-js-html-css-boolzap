@@ -35,6 +35,10 @@ header,main{
   margin-right: 20px;
 }
 
+.paddingLeftClass{
+  padding-left: 10px;
+}
+
 .boxWhiteClass{
   background: white;
   height: 75px;
