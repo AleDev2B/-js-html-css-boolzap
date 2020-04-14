@@ -92,6 +92,10 @@ header,main{
   font-size:15px;
 }
 
+#example{
+  width: 167px;
+}
+
 i {
   color: grey;
   opacity: 0.7;
