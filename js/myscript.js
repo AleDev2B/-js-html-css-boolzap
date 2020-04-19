@@ -6,28 +6,35 @@ $(document).ready(function(){
   var minutes = date.getMinutes();
   document.getElementById("example").innerHTML = hours + ":" + minutes;
 
-var chatWin = $('.main-partedx');
+var finestraMsg = $('.main-partedx');
 var inputMsg = $('.new-message-inputs');
 var buttonSend = $('.buttonSend');
 
-//gestisco evento su bottone di invio
-buttonSend.click(
-  function () {
-    var msg = inputMsg.val();
-    // console.log(msg);
-    chatWin.append('<div class="sent-msg rightAllignClass"><div class="box-msg centraQualcosaClass colorgreenclass"><p class="normalText">' + msg + '</p></div></div>');
+  buttonSend.click(
+    function () {
+      var msg = inputMsg.val();
+      // controllo per evitare di inserire messaggi vuoti
+      if (inputMsg.val() !== "") {
 
-    inputMsg.val();
+          finestraMsg.append('<div class="sent-msg rightAllignClass"><div class="box-msg centraQualcosaClass colorgreenclass">' + msg + '</div></div>');
 
-    //dopo un secondo
-      setTimeout(
-        function(){
-          chatWin.append('<div class="sent-msg rightAllignClass"><div class="box-msg centraQualcosaClass colorgreenclass"><p class="normalText">');
+        //dopo un secondo deve apparire un nuovo msg con un testo sempre uguale (statico)
+          setTimeout(
+            function(){
+              finestraMsg.append('<div class="received-msg leftAllignClass"><div class="box-msg centraQualcosaClass leftAllignClass"><p class="normalText">ok</p></div></div>');
+            }
+            ,1000);
+            inputMsg.val("");
+
         }
-        ,1000);
-      // deve apparire un nuovo msg con un testo sempre uguale (statico)
-    }
-  );
+      }
+
+    );
+
+
+
+//gestisco evento su bottone di invio
+
 
 
   // filtro contatti
@@ -44,6 +51,7 @@ buttonSend.click(
       //salvo in una var il valore del testo del nome nel contatto (stringa2)
       var stringaNome = $(this).find('.contact-name').text().toLowerCase();
       // confronto per vedere se la stringa inserita nell'input è inclusa nel nome del contatto
+      
         //stringa2.includes(stringa1)
         if(stringaNome.includes(stringaFiltro)){
         //se l'occorenza è stata trovata lascio il blocco di contatto visibile
