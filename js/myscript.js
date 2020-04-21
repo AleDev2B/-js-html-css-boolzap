@@ -1,14 +1,18 @@
 
 $(document).ready(function(){
 
+function visualizzaOra() {
   var date = new Date();
-  var hours = date.getHours();
-  var minutes = date.getMinutes();
-  document.getElementById("example").innerHTML = hours + ":" + minutes;
+  var memorizzaOra = date.getHours() + ":" + date.getMinutes();
+  return memorizzaOra
+}
+
+  document.getElementById("example").innerHTML = visualizzaOra();
 
 var finestraMsg = $('.main-partedx');
 var inputMsg = $('.new-message-inputs');
 var buttonSend = $('.buttonSend');
+var contactSelected = $(".listUser.boxWhiteClass.centraQualcosaClass");
 
   buttonSend.click(
     function () {
@@ -51,7 +55,7 @@ var buttonSend = $('.buttonSend');
       //salvo in una var il valore del testo del nome nel contatto (stringa2)
       var stringaNome = $(this).find('.contact-name').text().toLowerCase();
       // confronto per vedere se la stringa inserita nell'input è inclusa nel nome del contatto
-      
+
         //stringa2.includes(stringa1)
         if(stringaNome.includes(stringaFiltro)){
         //se l'occorenza è stata trovata lascio il blocco di contatto visibile
@@ -63,5 +67,18 @@ var buttonSend = $('.buttonSend');
 
     });
   });
+
+  // aggiungere classe active per evidenziare il contatto selezionato al click del mouse
+contactSelected.on({
+  click:function () {
+    $(this).addClass("active");
+  }, mouseenter:function () {
+    contactSelected.removeClass("active");
+    $(this).toggleClass("active");
+  }, mouseleave:function () {
+    $(this).removeClass("active");
+  },
+
+});
 
 });

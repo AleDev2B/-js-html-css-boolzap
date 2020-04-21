@@ -46,7 +46,7 @@ header,main{
   border-bottom: 1px solid lightgrey;
 }
 
-.boxGreyClass{
+.boxGreyClass,.active{
   background: #EAEAEA;
   height: 75px;
   display: flex;
